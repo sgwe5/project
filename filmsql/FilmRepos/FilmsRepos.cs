@@ -6,11 +6,11 @@ using System.Xml.Linq;
 
 namespace FlmLib.DataAcces.FilmRepos
 {
-    public class FilmsRepos
+    public class FilmsRepos : IFilmsRepos
     {
         private readonly FilmLibDb _context;
-        public FilmsRepos(FilmLibDb context) 
-        { 
+        public FilmsRepos(FilmLibDb context)
+        {
             _context = context;
         }
         public async Task<List<Film>> Get()
@@ -20,12 +20,12 @@ namespace FlmLib.DataAcces.FilmRepos
                 .ToListAsync();
 
             var films = filmEntites
-                .Select(b => Film.Create(b.Id, b.Name, b.Genre, b.Year ).Film)
+                .Select(b => Film.Create(b.Id, b.Name, b.Genre, b.Year).Film)
                 .ToList();
 
             return films;
         }
-   public async Task<Guid> Create(Film film)
+        public async Task<Guid> Create(Film film)
         {
             var filmEntity = new FilmEntity
             {
@@ -51,6 +51,19 @@ namespace FlmLib.DataAcces.FilmRepos
                 .SetProperty(b => b.Year, b => year));
 
             return id;
+        }
+        public async Task<Guid> DeleteFilm(Guid Id)
+        {
+            await _context.Films
+                .Where (b => b.Id == Id)
+                .ExecuteDeleteAsync();
+
+            return Id;
+        }
+
+        public Task<Guid> Delete(Guid id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,4 +1,6 @@
+using FilmLib.App.services;
 using filmsql;
+using FlmLib.DataAcces.FilmRepos;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +18,8 @@ builder.Services.AddDbContext<FilmLibDb>(
         options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(FilmLibDb)));
     });
 
+builder.Services.AddScoped<IFilmsService, FilmsService>();
+builder.Services.AddScoped<IFilmsRepos, FilmsRepos>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

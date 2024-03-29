@@ -24,6 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\FilmLib.App\FilmLib.Application.csproj" />
+    <ProjectReference Include="..\filmLib\FilmLib.core.csproj" />
     <ProjectReference Include="..\filmsql\FlmLib.DataAcces.csproj" />
   </ItemGroup>
 

@@ -15,9 +15,11 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 		{B1B71AB7-B733-41CA-8F3D-C3248EC95304} = {B1B71AB7-B733-41CA-8F3D-C3248EC95304}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmLib.core", "filmLib\FilmLib.core.csproj", "{B1B71AB7-B733-41CA-8F3D-C3248EC95304}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FilmLib.core", "filmLib\FilmLib.core.csproj", "{B1B71AB7-B733-41CA-8F3D-C3248EC95304}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlmLib.DataAcces", "filmsql\FlmLib.DataAcces.csproj", "{3948729A-84BA-4377-A1FC-9B9AA91CA2C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlmLib.DataAcces", "filmsql\FlmLib.DataAcces.csproj", "{3948729A-84BA-4377-A1FC-9B9AA91CA2C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilmLib.Application", "..\FilmLib.App\FilmLib.Application.csproj", "{A2DFDFCC-71FF-42C8-A5CD-6324E3F799A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{3948729A-84BA-4377-A1FC-9B9AA91CA2C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3948729A-84BA-4377-A1FC-9B9AA91CA2C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3948729A-84BA-4377-A1FC-9B9AA91CA2C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2DFDFCC-71FF-42C8-A5CD-6324E3F799A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2DFDFCC-71FF-42C8-A5CD-6324E3F799A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2DFDFCC-71FF-42C8-A5CD-6324E3F799A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2DFDFCC-71FF-42C8-A5CD-6324E3F799A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
